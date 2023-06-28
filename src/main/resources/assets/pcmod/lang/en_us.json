@@ -1,0 +1,7 @@
+{
+  "item.pcmod.gpu": "Graphical Processing Unit (GPU) ",
+  "item.pcmod.cpu": "Central Processing Unit (CPU) ",
+  "item.pcmod.ram": "Random Access Memory (RAM) ",
+  "item.pcmod.ssd_sata": "SATA Solid State Drive (SSD)"
+
+}
