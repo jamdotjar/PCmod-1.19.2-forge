@@ -3,7 +3,7 @@ plugins {
 }
 
 
-group = 'com.jamdotjar'
+group = 'com.jamdotjar.pcmod'
 version = '1.0'
 
 java {
