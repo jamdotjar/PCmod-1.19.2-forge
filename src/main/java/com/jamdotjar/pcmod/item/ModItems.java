@@ -15,6 +15,9 @@ public class ModItems {
     //IMPORTANT: this creates the items V
     public static final RegistryObject<Item> CPU = ITEMS.register("cpu", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PC_COMPONENTS)));
 
+    public static final RegistryObject<Item> GPU = ITEMS.register("gpu", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PC_COMPONENTS)));
+
+    public static final RegistryObject<Item> SSD_SATA = ITEMS.register("ssd_sata", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PC_COMPONENTS)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
