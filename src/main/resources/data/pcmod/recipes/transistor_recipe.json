@@ -2,22 +2,22 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "iii",
-        "TTT",
+        "SSS",
         "ggg"
     ],
     "key": {
         "i": {
             "item": "minecraft:iron_ingot"
         },
-        "T": {
-            "item": "pcmod:transistor"
+        "S": {
+            "item": "pcmod:silicon"
         },
         "g": {
             "item": "minecraft:gold_ingot"
         }
     },
     "result": {
-        "item": "pcmod:cpu",
+        "item": "pcmod:transistor",
         "count": 1
     }
 }
