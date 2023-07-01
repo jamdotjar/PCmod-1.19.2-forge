@@ -7,7 +7,7 @@ public class CreativeTabs {
     public static final CreativeModeTab PC_COMPONENTS = new CreativeModeTab("pc_components") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.CPU.get());
+            return new ItemStack(ModItems.GPU.get());
         }
     };
     public static final CreativeModeTab PC_CRAFTING_ITEMS = new CreativeModeTab("pc_crafting_items") {

@@ -24,7 +24,7 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> SILICON_BLOCK = registerBlock("silicon_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(6f).requiresCorrectToolForDrops()), CreativeTabs.PC_CRAFTING_ITEMS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()), CreativeTabs.PC_CRAFTING_ITEMS);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

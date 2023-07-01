@@ -17,6 +17,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> GPU = ITEMS.register("gpu", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_COMPONENTS)));
 
+    public static final RegistryObject<Item> RAM = ITEMS.register("ram", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_COMPONENTS)));
     public static final RegistryObject<Item> SSD_SATA = ITEMS.register("ssd_sata", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_COMPONENTS)));
 
     // - Crafting Items -
