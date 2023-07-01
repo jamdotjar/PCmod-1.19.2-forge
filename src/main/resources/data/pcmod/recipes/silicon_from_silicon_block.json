@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "silicon",
+  "ingredients": [
+    {
+      "item": "pcmod:silicon_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "pcmod:silicon"
+  }
+}

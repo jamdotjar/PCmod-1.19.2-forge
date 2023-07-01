@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "pcmod:block/silicon_block"}
+  }
+}

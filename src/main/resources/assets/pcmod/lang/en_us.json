@@ -5,7 +5,11 @@
   "item.pcmod.silicon": "Silicon",
   "item.pcmod.transistor": "Transistor",
 
-  "itemGroup.pc_components": "PCMod Components",
-  "itemGroup.pc_crafting_items": "PCMod Crafting Items"
+  "block.pcmod.silicon_block": "Block of Silicon",
+
+  "itemGroup.pc_components": "PC Mod Components",
+  "itemGroup.pc_crafting_items": "PC Mod Crafting Items"
+
+
 
 }
