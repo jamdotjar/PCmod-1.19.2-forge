@@ -20,8 +20,10 @@ public class ModItems {
     public static final RegistryObject<Item> RAM = ITEMS.register("ram", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_COMPONENTS)));
     public static final RegistryObject<Item> SSD_SATA = ITEMS.register("ssd_sata", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_COMPONENTS)));
 
+    public static final RegistryObject<Item> HDD = ITEMS.register("hdd", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_COMPONENTS)));
     // - Crafting Items -
     public static final RegistryObject<Item> TRANSISTOR = ITEMS.register("transistor", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS)));
+
 
     public static final RegistryObject<Item> SILICON = ITEMS.register("silicon", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS)));
     // --- Item Registration ---
