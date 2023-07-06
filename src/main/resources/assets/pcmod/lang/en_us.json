@@ -8,6 +8,7 @@
   "item.pcmod.ram": "Random Access Memory (RAM)",
 
   "block.pcmod.silicon_block": "Block of Silicon",
+  "block.pcmod.refinery": "Refinery",
 
   "itemGroup.pc_components": "PC Mod Components",
   "itemGroup.pc_crafting_items": "PC Mod Crafting Items"
