@@ -24,6 +24,13 @@ public class ModFluids {
     public static final ForgeFlowingFluid.Properties CRUDE_OIL_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.CRUDE_OIL_FLUID_TYPE, SOURCE_CRUDE_OIL, FLOWING_CRUDE_OIL).slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.CRUDE_OIL_BLOCK).bucket(ModItems.CRUDE_OIL_BUCKET);
 
+    public static final RegistryObject<FlowingFluid> SOURCE_REFINED_CRUDE_OIL = FLUIDS.register("refined_crude_oil_fluid",
+            () -> new ForgeFlowingFluid.Source(ModFluids.REFINED_CRUDE_OIL_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_REFINED_CRUDE_OIL = FLUIDS.register("flowing_crude_oil",
+            () -> new ForgeFlowingFluid.Flowing(ModFluids.REFINED_CRUDE_OIL_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties REFINED_CRUDE_OIL_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
+            ModFluidTypes.REFINED_CRUDE_OIL_FLUID_TYPE, SOURCE_REFINED_CRUDE_OIL, FLOWING_REFINED_CRUDE_OIL).slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.REFINED_CRUDE_OIL_BLOCK).bucket(ModItems.REFINED_CRUDE_OIL_BUCKET);
+
 
     public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);

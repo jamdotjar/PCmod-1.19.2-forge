@@ -34,6 +34,12 @@ public class ModItems {
     public static final RegistryObject<Item> CRUDE_OIL_BUCKET = ITEMS.register("crude_oil_bucket",
             () -> new BucketItem(ModFluids.SOURCE_CRUDE_OIL,
                     new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+    public static final RegistryObject<Item> REFINED_CRUDE_OIL_BUCKET = ITEMS.register("refined_crude_oil_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_REFINED_CRUDE_OIL,
+                    new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+
     // --- Item Registration ---
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

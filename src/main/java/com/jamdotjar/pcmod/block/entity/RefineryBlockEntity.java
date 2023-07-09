@@ -1,5 +1,6 @@
 package com.jamdotjar.pcmod.block.entity;
 
+import com.jamdotjar.pcmod.item.ModItems;
 import com.sun.jna.platform.win32.Winspool;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -12,6 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.MossBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -73,6 +75,7 @@ public class RefineryBlockEntity extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+
         return;
     }
 
@@ -129,13 +132,49 @@ public class RefineryBlockEntity extends BlockEntity implements MenuProvider {
         if(hasRecipe(pEntity)) {
             pEntity.progress++;
             setChanged(level, pos, state);
+
             if(pEntity.progress == pEntity.maxProgress) {
                 craftItem(pEntity);
             }
         } else  {
-            pEntity.resetProgress;
-
+            pEntity.resetProgress();
+            setChanged(level, pos, state);
         }
 
+
+    }
+
+    private void resetProgress() {
+        this.progress = 0;
+    }
+
+    private static void craftItem(RefineryBlockEntity pEntity) {
+        if (hasRecipe(pEntity)) {
+            pEntity.itemHandler.extractItem(1, 1, false);
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.REFINED_CRUDE_OIL_BUCKET.get(),
+                    pEntity.itemHandler.getStackInSlot(2).getCount()+ 1));
+
+            pEntity.resetProgress();
+        }
+    }
+
+    private static boolean hasRecipe(RefineryBlockEntity entity) {
+        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
+        for( int i = 0; i < entity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
+        }
+
+        boolean firstSlotHasItemToBeRefined = entity.itemHandler.getStackInSlot(1).getItem() == ModItems.CRUDE_OIL_BUCKET.get();
+
+        return firstSlotHasItemToBeRefined && canInsertAmountIntoOutputSlot(inventory) &&
+                canInsertItemIntoOutputSlot(inventory, new ItemStack(ModItems.REFINED_CRUDE_OIL_BUCKET.get()));
+    }
+
+    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack itemStack) {
+        return inventory.getItem(2).getItem() == itemStack.getItem() || inventory.getItem(2).isEmpty();
+    }
+
+    private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
+        return inventory.getItem(2).getMaxStackSize() >  inventory.getItem( 2).getCount();
     }
 }
