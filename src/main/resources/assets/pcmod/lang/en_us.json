@@ -5,6 +5,7 @@
   "item.pcmod.silicon": "Silicon",
   "item.pcmod.transistor": "Transistor",
   "item.pcmod.hdd": "Hard Disk Drive(HDD)",
+  "item.pcmod.pc_fan": "PC fan",
   "item.pcmod.ram": "Random Access Memory (RAM)",
 
   "block.pcmod.silicon_block": "Block of Silicon",
