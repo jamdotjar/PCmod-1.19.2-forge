@@ -1,6 +1,7 @@
 package com.jamdotjar.pcmod.block.entity;
 
 import com.jamdotjar.pcmod.item.ModItems;
+import com.jamdotjar.pcmod.screen.RefineryMenu;
 import com.sun.jna.platform.win32.Winspool;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -76,7 +77,7 @@ public class RefineryBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 
-        return;
+        return new RefineryMenu(id, inventory, this, this.data);
     }
 
     @Override
