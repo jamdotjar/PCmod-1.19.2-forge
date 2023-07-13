@@ -1,8 +1,16 @@
 package com.jamdotjar.pcmod;
 
 import com.jamdotjar.pcmod.block.ModBlocks;
+import com.jamdotjar.pcmod.block.entity.ModBlockEntities;
+import com.jamdotjar.pcmod.fluid.ModFluidTypes;
+import com.jamdotjar.pcmod.fluid.ModFluids;
 import com.jamdotjar.pcmod.item.ModItems;
+import com.jamdotjar.pcmod.screen.ModMenuTypes;
+import com.jamdotjar.pcmod.screen.RefineryScreen;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,6 +36,11 @@ public class Pcmod {
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -48,6 +61,12 @@ public class Pcmod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_REFINED_CRUDE_OIL.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_REFINED_CRUDE_OIL.get(), RenderType.translucent());
+
+            MenuScreens.register(ModMenuTypes.REFINERY_MENU.get(), RefineryScreen::new);
         }
     }
 }

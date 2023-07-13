@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "pcmod:block/refinery"
+    },
+    "facing=south": {
+      "model": "pcmod:block/refinery",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "pcmod:block/refinery",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "pcmod:block/refinery",
+      "y": 90
+    }
+  }
+}
