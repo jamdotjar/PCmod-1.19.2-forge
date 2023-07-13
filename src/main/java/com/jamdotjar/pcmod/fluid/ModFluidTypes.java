@@ -18,9 +18,9 @@ public class ModFluidTypes {
     public static final DeferredRegister<FluidType> FLUID_TYPES =
             DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Pcmod.MOD_ID);
 
-    public static final RegistryObject<FluidType> CRUDE_OIL_FLUID_TYPE = register("crude_oil_fluid",
-            FluidType.Properties.create().lightLevel(2).density(17).viscosity(7));
     public static final RegistryObject<FluidType> REFINED_CRUDE_OIL_FLUID_TYPE = register("refined_crude_oil_fluid",
+            FluidType.Properties.create().lightLevel(2).density(17).viscosity(7));
+    public static final RegistryObject<FluidType> CRUDE_OIL_FLUID_TYPE = register("crude_oil_fluid",
             FluidType.Properties.create().lightLevel(2).density(17).viscosity(7));
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, CRUDE_OIL_OVERLAY_RL, 0xFC121212, new Vector3f(18f/255f, 18f/255f, 18/255f), properties ));

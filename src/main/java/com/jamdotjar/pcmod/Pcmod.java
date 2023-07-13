@@ -63,8 +63,8 @@ public class Pcmod {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
 
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_CRUDE_OIL.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_CRUDE_OIL.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_REFINED_CRUDE_OIL.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_REFINED_CRUDE_OIL.get(), RenderType.translucent());
 
             MenuScreens.register(ModMenuTypes.REFINERY_MENU.get(), RefineryScreen::new);
         }

@@ -123,4 +123,4 @@ public class RefineryMenu extends AbstractContainerMenu {
         }
     }
 }
-}
+
