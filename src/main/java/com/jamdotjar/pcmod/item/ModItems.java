@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Pcmod.MOD_ID);
 
-    // --- Item Definitions ---
+
 
     // - Components -
     public static final RegistryObject<Item> CPU = ITEMS.register("cpu", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_COMPONENTS)));
@@ -28,9 +28,15 @@ public class ModItems {
 
     public static final RegistryObject<Item> TRANSISTOR = ITEMS.register("transistor", () -> new Item(new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS)));
 
-
+    // - Crafting items -
     public static final RegistryObject<Item> SILICON = ITEMS.register("silicon",
             () -> new Item(new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS)));
+
+    public static final RegistryObject<Item> HEAT_SHIELD = ITEMS.register("heat-shield",
+            () -> new Item(new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS)));
+    public static final RegistryObject<Item> PCB_CPU = ITEMS.register("pcb_cpu",
+            () -> new Item(new Item.Properties().tab(CreativeTabs.PC_CRAFTING_ITEMS)));
+
 
     public static final RegistryObject<Item> CRUDE_OIL_BUCKET = ITEMS.register("crude_oil_bucket",
             () -> new BucketItem(ModFluids.SOURCE_CRUDE_OIL,

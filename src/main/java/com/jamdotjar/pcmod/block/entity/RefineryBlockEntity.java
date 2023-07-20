@@ -70,7 +70,7 @@ public class RefineryBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("Gem Infusing Station");
+        return Component.literal("Refinery");
     }
 
     @Nullable

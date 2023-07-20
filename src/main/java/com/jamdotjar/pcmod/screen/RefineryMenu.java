@@ -33,11 +33,12 @@ public class RefineryMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 12, 15));
-            this.addSlot(new SlotItemHandler(handler, 1, 86, 15));
-            this.addSlot(new SlotItemHandler(handler, 2, 12, 60));
+            this.addSlot(new SlotItemHandler(handler, 0, 48, 53));
+            this.addSlot(new SlotItemHandler(handler, 1, 48, 17));
+            this.addSlot(new SlotItemHandler(handler, 2, 108, 35));
         } );
         addDataSlots(data);
+
     }
     public boolean isCrafting() {
         return data.get(0) > 0;
@@ -46,7 +47,7 @@ public class RefineryMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 26; // This is the height in pixels of your arrow
+        int progressArrowSize = 22; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }

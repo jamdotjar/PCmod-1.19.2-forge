@@ -40,7 +40,9 @@ public class RefineryScreen extends AbstractContainerScreen<RefineryMenu> {
     }
     private void renderProgressArrow(PoseStack pPoseStack, int x, int y) {
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 105, y + 33, 176, 0, 8, menu.getScaledProgress());
+
+
+            blit(pPoseStack, x + 71, y + 34, 176, 14, menu.getScaledProgress()+1, 16);
         }
     }
 

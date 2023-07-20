@@ -7,9 +7,13 @@
   "item.pcmod.hdd": "Hard Disk Drive(HDD)",
   "item.pcmod.pc_fan": "PC fan",
   "item.pcmod.ram": "Random Access Memory (RAM)",
-
+  "item.pcmod.crude_oil_bucket": "Bucket of Crude Oil",
+  "item.pcmod.refined_crude_oil_bucket": "Bucket of Refined Crude Oil",
+  "item.pcmod.refinery": "Refinery",
+  "item.pcmod.heat-shield": "Integrated Heat Spreader (IHS)",
   "block.pcmod.silicon_block": "Block of Silicon",
   "block.pcmod.refinery": "Refinery",
+
 
   "itemGroup.pc_components": "PC Mod Components",
   "itemGroup.pc_crafting_items": "PC Mod Crafting Items"
